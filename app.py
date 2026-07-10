@@ -29,7 +29,8 @@ from rag.chain import retrieve_context
 # ==========================
 
 load_dotenv()
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+if os.name == "nt":
+    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 API_KEY = os.getenv("IBM_API_KEY")
 PROJECT_ID = os.getenv("IBM_PROJECT_ID")
 URL = os.getenv("IBM_URL")
