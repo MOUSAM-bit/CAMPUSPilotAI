@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>College Recommendation</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="main">
+
+    <h1>🏫 AI College Recommendation</h1>
+
+    <form action="/recommend" method="POST">
+
+        <label>Class 12 Percentage</label><br>
+        <input type="number" name="percentage" required><br><br>
+
+        <label>Stream</label><br>
+        <select name="stream">
+
+            <option>PCM</option>
+            <option>PCB</option>
+            <option>Commerce</option>
+            <option>Arts</option>
+
+        </select><br><br>
+
+        <label>Preferred Course</label><br>
+        <input type="text" name="course"><br><br>
+
+        <label>Preferred State</label><br>
+        <input type="text" name="state"><br><br>
+
+        <button type="submit">
+
+            🎓 Get Recommendations
+
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
+{% if result %}
+
+<hr>
+
+<h2>🎓 Recommended Colleges</h2>
+
+<div class="bot-message">
+    {{ result }}
+</div>
+
+{% endif %}

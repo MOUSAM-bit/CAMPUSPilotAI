@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusPilot AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="sidebar">
+<div class="logo">
+    <h2>🎓 CampusPilot AI</h2>
+    <p>Admission Copilot</p>
+    <p><b>Logged in as:</b> {{ username }}</p>
+</div>
+
+        <ul>
+            <li class="active">🏠 Home</li>
+            <li>📚 Courses</li>
+            <li>🎓 Eligibility</li>
+            <li>💰 Scholarships</li>
+            <li>📄 Documents</li>
+            <li>📅 Deadlines</li>
+            <li>🗺 Roadmap</li>
+            <li><a href="/history">📜 Chat History</a></li>
+            <li>⚙ Settings</li>
+        </ul>
+
+    </div>
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <div>
+              <h1>Welcome {{ username }} 👋</h1>
+                <p>Your Personal Admission Copilot</p>
+            </div>
+
+            <a href="/logout">
+    <button class="profile">
+        🚪 Logout
+    </button>
+</a>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🎓 Eligibility</h3>
+                <p>Check Admission Eligibility</p>
+            </div>
+
+            <div class="card">
+                <h3>💰 Scholarships</h3>
+                <p>Explore Scholarships</p>
+            </div>
+
+            <div class="card">
+                <h3>📄 Documents</h3>
+                <p>Required Documents</p>
+            </div>
+
+            <div class="card">
+                <h3>📅 Deadlines</h3>
+                <p>Never Miss Dates</p>
+            </div>
+
+        </div>
+<a href="/recommend" style="text-decoration:none;color:inherit;">
+    <div class="card">
+        <h3>🏫 College Recommendation</h3>
+        <p>Find the best colleges based on your profile</p>
+    </div>
+</a>
+        <div class="chat-container">
+
+            <div class="chat-header">
+                🤖 CampusPilot Assistant
+            </div>
+
+            <div class="chat-box">
+
+                <div class="bot-message">
+                    👋 Hello!<br><br>
+
+                    I can help you with:
+                    <ul>
+                        <li>Admission Process</li>
+                        <li>Eligibility</li>
+                        <li>Scholarships</li>
+                        <li>Fees</li>
+                        <li>Required Documents</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    placeholder="Ask your admission question...">
+
+                <!-- Hidden File Input -->
+                <input
+                    type="file"
+                    id="fileInput"
+                    hidden>
+
+                <button>🎤</button>
+
+                <!-- Upload Button -->
+                <button id="uploadBtn">
+                    📎
+                </button>
+
+                <button class="send">
+                    Send
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
