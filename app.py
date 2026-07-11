@@ -89,9 +89,9 @@ def search_web(query):
 
         return text
 
-    except Exception:
-
-        return ""
+   except Exception as e:
+    print("Web Search Error:", e)
+    return ""
 
 
 # ==========================
@@ -232,11 +232,16 @@ def chat():
 
         # Search latest information from web
         web_context = search_web(user_message)
-
+print("WEB CONTEXT:")
+print(web_context)
         # Merge both
         if web_context:
             context += "\n\nLatest Web Information:\n" + web_context
+print("WEB CONTEXT:")
+print(web_context)
 
+print("FINAL CONTEXT:")
+print(context)
         prompt = f"""
 You are CampusPilot AI, an intelligent college admission assistant.
 
