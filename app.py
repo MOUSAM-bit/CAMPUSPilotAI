@@ -230,19 +230,18 @@ def chat():
 
         # Retrieve context from FAISS
         context = retrieve_context(user_message)
-
-        # Search latest information from web
+               # Search latest information from web
         web_context = search_web(user_message)
-print("WEB CONTEXT:")
-print(web_context)
+
+        print("WEB CONTEXT:")
+        print(web_context)
+
         # Merge both
         if web_context:
             context += "\n\nLatest Web Information:\n" + web_context
-print("WEB CONTEXT:")
-print(web_context)
 
-print("FINAL CONTEXT:")
-print(context)
+        print("FINAL CONTEXT:")
+        print(context)
         prompt = f"""
 You are CampusPilot AI, an intelligent college admission assistant.
 
