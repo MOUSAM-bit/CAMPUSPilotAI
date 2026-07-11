@@ -89,9 +89,10 @@ def search_web(query):
 
         return text
 
-   except Exception as e:
-    print("Web Search Error:", e)
-    return ""
+    except Exception as e:
+
+        print("Web Search Error:", e)
+        return ""
 
 
 # ==========================
