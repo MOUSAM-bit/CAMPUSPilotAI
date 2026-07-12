@@ -8,22 +8,17 @@ CampusPilot AI is an intelligent admission assistant that helps students quickly
 
 ## 🚀 Problem Statement
 
-Students often spend hours searching through university websites, admission brochures, and FAQs to understand eligibility, fees, admission procedures, deadlines, and course details. Since this information is scattered across multiple sources and frequently updated, students often face confusion or rely on outdated information.
-
-CampusPilot AI simplifies this process by providing a single platform where students can ask questions in natural language and receive accurate, personalized, and up-to-date admission guidance.
-
----
+Students often struggle to access accurate and up-to-date college admission information because it is scattered across university websites, admission brochures, and official notices. This makes it difficult to quickly find details about eligibility, fees, application procedures, and important deadlines, leading to confusion and poor admission decisions
 
 ## 💡 Proposed Solution
 
-CampusPilot AI acts as a virtual admission counselor by combining official admission documents with the latest web information.
+CampusPilot AI is an intelligent college admission assistant that simplifies the entire admission journey for students. Instead of searching through multiple websites and lengthy admission brochures, students can simply ask their questions in natural language.
+The system uses Retrieval-Augmented Generation (RAG) with IBM Granite to retrieve accurate information from official admission documents. If the required information is not available in the uploaded documents, it automatically searches trusted web sources to provide the latest admission updates.
 
-The system:
-- Retrieves information from admission brochures using **Retrieval-Augmented Generation (RAG)**.
-- Searches trusted web sources if the information is unavailable in the uploaded documents.
-- Generates natural, context-aware responses using **IBM Granite Foundation Models**.
-- Recommends suitable colleges based on student preferences.
-- Summarizes lengthy admission brochures into easy-to-understand points.
+CampusPilot AI also helps students identify colleges that match their percentage, preferred course, stream, and state. In addition, it can summarize admission brochures, answer queries related to eligibility, fees, application procedures, and deadlines, and even extract text from scanned PDF documents using OCR technology.
+By bringing official documents, real-time web information, and AI-powered guidance together on a single platform, CampusPilot AI reduces the time and effort students spend searching for information, minimizes confusion, and enables them to make confident and well-informed admission decisions.
+
+
 
 ---
 
@@ -105,30 +100,25 @@ Used for:
 
 # 🧠 Role of Agentic AI
 
-CampusPilot AI acts as an intelligent admission assistant rather than a simple chatbot.
-
-It:
-- Understands student queries.
-- Retrieves information from official admission documents.
-- Searches trusted web sources when required.
-- Reasons over multiple knowledge sources.
-- Generates personalized admission guidance.
-
----
+Key Responsibilities of Agentic AI
+Understands student questions in natural language. 
+Searches official admission documents for reliable information. 
+Retrieves the latest admission updates from trusted web sources when needed. 
+Recommends colleges based on the student's profile and preferences. 
+Summarizes lengthy admission brochures into easy-to-read points. 
+Provides personalized, accurate, and conversational guidance throughout the admission process. 
 
 # 🌟 Novelty & Uniqueness
+Retrieval-Augmented Generation (RAG): Retrieves information directly from official admission documents, ensuring accurate and context-based responses instead of relying only on AI-generated knowledge. IBM Granite Foundation Model: Uses IBM Granite on watsonx.ai to understand student queries, reason over retrieved information, summarize documents, and generate natural, human-like responses. OCR-Enabled Document Intelligence: Extracts text from both searchable and scanned admission brochures using Tesseract OCR, making image-based PDFs searchable. Hybrid 
 
-- Retrieval-Augmented Generation (RAG) for accurate responses.
-- IBM Granite-powered conversational AI.
-- OCR support for scanned admission brochures.
-- FAISS semantic document retrieval.
-- Real-time web search for latest admission updates.
-- Personalized college recommendations.
-- Automatic document summarization.
-- Secure user authentication and chat history.
-- Combines multiple AI technologies into one admission platform.
+ Knowledge Retrieval: Combines official admission documents with real-time web search to provide both reliable institutional information and the latest admission updates. FAISS Vector Search: Enables fast semantic search across uploaded admission documents for quick and relevant information retrieval. Personalized College Recommendations: Suggests colleges based on students' marks, stream, preferred course, and location instead of providing generic recommendations.
 
----
+ Admission Brochure Summarization: Converts lengthy admission PDFs into concise, easy-to-understand summaries, saving students time.
+Natural Language Interaction: Students can ask questions in simple everyday language without needing technical keywords. 
+
+Secure User Experience: Includes authentication and chat history, allowing students to securely access their previous conversations. 
+
+All-in-One Admission Platform: Integrates document processing, OCR, RAG, AI reasoning, web search, and personalized recommendations into a single intelligent admission assistant
 
 # 📂 Project Structure
 
